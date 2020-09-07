@@ -1,0 +1,280 @@
+@import variable
+   
+.container
+   max-width: 1240px
+   margin: 0 auto
+   padding: 0 30px
+
+.header
+   margin: 0 auto
+   background-color: #fefefe
+   &__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-top: 20px
+   &__logo
+      font-family: Pacifico
+      text-transform: capitalize
+      font-size: 40px
+      color: #666262
+      &:hover
+         cursor: pointer
+   &__logo_footer
+      color: #fbfbfb
+   &__icon
+      display: flex
+      align-items: center
+      &_item
+         width: 30px
+         height: 30px
+         margin-left: 8px
+         transition: transform .2s linear
+         &:hover
+            cursor: pointer
+            transform: translateY(-3px)
+   &__background
+      margin-top: 25px
+      background: url("../img/bg-img.jpg") bottom no-repeat fixed
+      background-size: cover
+      font-family: "Roboto Condensed"
+      &_title
+         color: #fefefe
+         font-size: 36px
+         text-transform: uppercase
+         padding: 60px 0
+   .navigation
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 10px
+      font-family: Oswald
+      &__link
+         margin-right: 40px
+         text-transform: uppercase
+         font-size: 18px
+         font-weight: 600
+         color: #666262
+         &:hover
+            color: #87b672
+      &__search
+         width: 25px
+         height: 25px
+         display: block
+         fill: #666262
+         transition: fill .3s linear
+         &:hover
+            cursor: pointer
+            fill: #87b672
+      &__active
+         color: #87b672
+
+.archive
+   padding: 60px 0
+   font-family: "Roboto Condensed"
+   &__container
+      display: flex
+      justify-content: space-between
+   .left
+      width: 65%
+      &__text
+         font-size: 16px
+         line-height: 24px
+         color: #8f8f8f
+      &__title
+         font-size: 18px
+         font-weight: 600
+         color: #5f5b5b
+         text-transform: uppercase
+         margin: 35px 0 30px 0
+      &__list
+         list-style-type: none
+         text-transform: capitalize
+         &_item
+            display: flex
+            align-items: center
+         &_icon
+            width: 10px
+            height: 10px
+            margin-right: 10px
+         &_link
+            font-size: 16px
+            line-height: 30px
+            text-align: left
+            color: #8f8f8f
+            &:hover
+               text-decoration: underline
+   .right
+      width: 30%
+      &__title
+         font-size: 18px
+         font-weight: 600
+         color: #666262
+         text-transform: uppercase
+         margin: 40px 0 30px 0
+         &:first-child
+            margin-top: 0px
+      &__text
+         font-size: 16px
+         line-height: 24px
+         color: #8f8f8f
+         &_item
+            font-size: 16px
+            line-height: 24px
+            color: #9b9999
+            border-bottom: 1px solid #cccccc
+            padding: 10px 0
+         &_border
+            border-bottom: none
+         &_green
+            display: block
+            color: #87b672
+            border-bottom: 1px solid #cccccc
+            padding: 20px 0
+            margin: 0 0 20px
+      &__widget
+         display: flex
+         flex-wrap: wrap
+         &_block
+            width: 24%
+            margin: 1px
+      &__image
+         width: 100%
+         height: auto
+         display: block
+      &__link
+         color: #87b672
+         &:hover
+            text-decoration: underline
+
+.footer
+   background-color: #333
+   padding: 60px 0 0 0
+   font-family: "Roboto Condensed"
+   @media screen and ( max-width: 768px )
+      padding: 30px 0 0
+   &__row
+      display: flex
+      padding-bottom: 40px
+      @media screen and ( max-width: 768px )
+         flex-wrap: wrap
+         justify-content: space-between
+         padding-bottom: 10px
+   &__column
+      width: 20%
+      @media screen and ( max-width: 768px )
+         width: 40%
+      @media screen and ( max-width: 515px )
+         justify-content: space-between  
+      &:first-child
+         width: 30%
+         @media screen and ( max-width: 768px )
+            width: 50%
+            margin-bottom: 20px
+         @media screen and ( max-width: 515px )
+            width: 100%
+      &:nth-child(2)
+         padding-left: 30px
+         @media screen and ( max-width: 768px )
+            padding: 0
+            margin-bottom: 20px
+      &:nth-child(3)
+         padding-left: 40px
+         @media screen and ( max-width: 768px )
+            padding: 0
+         @media screen and ( max-width: 515px )
+            width: 25%
+      &:nth-child(4)
+         @media screen and ( max-width: 515px )
+            width: 100%
+            margin-top: 20px    
+   &__logo
+      display: flex
+      align-items: center
+      justify-content: space-between
+   &__text
+      color: #9b9999
+      line-height: 1.5
+      @include font(14,8)
+      &_white
+         color: #cbcbcb
+         &:hover
+            text-decoration: underline
+   &__title
+      font-weight: 700
+      color: #fefefe
+      text-transform: uppercase
+      padding-bottom: 30px
+      @include font(18,12)
+      @media screen and ( max-width: 768px )
+         padding-bottom: 10px
+   &__mail
+      color: #9b9999
+      padding: 10px 0
+      @include  font (16,10)
+   &__number
+      font-weight: 700
+      color: #fefefe
+      @include font (16,10)
+   &__list
+      text-transform: uppercase
+   &__list_sm
+      text-transform: capitalize
+      @include font (14,10)
+   &__arrow
+      display: flex
+      align-items: center
+   &__icon
+      fill: #fff
+      width: 15px
+      height: 20px
+      padding-right: 5px
+      @media screen and ( max-width: 515px )
+         width: 10px
+         height: 15px
+   &__link
+      color: #9b9999
+      &:hover
+         text-decoration: underline
+   &__form
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      @media screen and ( max-width: 515px )
+         margin-top: 10px
+   &__input
+      padding: 10px 0 10px 15px
+      border: none
+      background-color: #828282
+      color: #fefefe
+      transition: all .3s linear
+      font-family: "Roboto Condensed"
+      width: 75%
+      @include font (14,8)
+      &:hover
+         background-color: #4e4c4c
+      &:focus
+         background-color: #4e4c4c
+      &::placeholder
+         color: #fefefe
+      @media screen and ( max-width: 515px )
+         width: 100%
+   &__button
+      border: none
+      text-transform: uppercase
+      color: #fefefe
+      background-color: #828282
+      transition: background-color .3s linear
+      font-family: "Roboto Condensed"
+      padding: 10px  20px
+      margin-left: 5px
+      @include font (14,8)
+      &:hover
+         background-color: #4e4c4c
+   &__base
+      display: flex
+      justify-content: space-between
+      padding: 20px 0
+      @media screen and ( max-width: 768px )
+         padding: 10px 0
+

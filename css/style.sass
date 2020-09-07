@@ -1,0 +1,375 @@
+@import variable
+
+.container
+   max-width: 1240px
+   margin: 0 auto
+   padding: 0 30px
+
+.header   
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   z-index: 1000
+   margin: 0 auto
+   &__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-top: 20px
+   &__logo
+      font-family: Pacifico
+      text-transform: capitalize
+      font-size: 40px
+      color: #fff
+      &:hover
+         cursor: pointer
+   &__icon
+      display: flex
+      align-items: center
+      &_item
+         width: 30px
+         height: 30px
+         margin-left: 8px
+         transition: transform .2s linear
+         &:hover
+            cursor: pointer
+            transform: translateY(-3px)
+   .navigation
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 10px
+      font-family: Oswald
+      &__link
+         margin-right: 40px
+         text-transform: uppercase
+         font-size: 18px
+         font-weight: 600
+         color: #fff
+         &:hover
+            color: #87b672
+         &_focused
+            color: #87b672
+      &__search
+         width: 25px
+         height: 25px
+         display: block
+         fill: #fff
+         transition: fill .3s linear
+         &:hover
+            cursor: pointer
+            fill: #87b672
+
+.intro
+   display: flex
+   flex-direction: column
+   height: 100vh
+   min-height: 575px
+   background: url("../img/bg-img.jpg") center no-repeat
+   background-size: cover
+   justify-content: center
+   font-family: "Roboto Condensed"
+   &__title
+      color: #fff
+      transform: translate(0px,-120%)
+      opacity: 0
+      transition: all 1s ease 0s
+      @include font (36,22)
+      @media screen and ( max-width: 620px )
+         text-align: center
+      &_green
+         background-color: #87b672
+         padding: 0 5px 0 5px
+         border-radius: 5px
+   &__title.active
+      transform: translate(0px,0%)
+      opacity: 1
+   &__subtitle
+      color: #fff
+      text-align: center
+      padding-top: 20px
+      opacity: 0
+      transition: all 0.8s ease 0s
+      @include font (22,12)
+   &__subtitle.active
+      opacity: 1
+      transition: all 0.8s ease .5s
+   &__button
+      text-align: center
+      margin-top: 50px
+      &_link
+         color: #fff
+         padding: 1em 2em
+         border: solid 2px #fff
+         text-transform: uppercase
+         font-weight: 600
+         border-radius: 3px
+         @include font (14,8)
+         &:hover
+            background-color: #87b672
+            border: solid 2px #87b672
+
+.team
+   background-color: #fefefe
+   padding: 60px 0 60px 0
+   font-family: "Roboto Condensed"
+   @media screen and ( max-width: 768px )
+      padding: 30px 0 0
+   &__header
+      width: 60%
+      margin: 0 auto
+      text-align: center
+      overflow: hidden
+   &__title
+      color: #666262
+      font-weight: 700
+      &_lg
+         @include font (22,16)
+      &_sm
+         @include font (18, 14) 
+   &__text
+      color: #9b9999
+      padding: 20px 0 20px 0
+      @include font (16,10)
+      @media screen and ( max-width: 768px )
+         padding: 10px 0 20px
+   &__body
+      display: flex
+      text-align: center
+      justify-content: space-between
+      flex-wrap: wrap
+   &__item
+      margin: 30px 0 0 0
+      width: 30%
+      transition: 
+      @media screen and ( max-width: 768px )
+         width: 60%
+         margin: 20px auto
+
+   &__icon
+      width: 85px
+      height: 85px
+      margin: 0 0 20px 0
+      fill: #b9b7b7
+   &__link
+      color: #87b672
+      @include font (16,12)
+      &:hover
+         text-decoration: underline   
+
+.work
+   background-color: #efefef
+   padding-top: 60px
+   font-family: "Roboto Condensed"
+   @media screen and ( max-width: 768px )
+      padding: 30px 0
+   &__header
+      width: 60%
+      margin: 0 auto
+      text-align: center
+   &__title
+      color: #666262
+      font-weight: 700
+      text-align: center
+      &_lg
+         @include font (22,16)
+      &_sm
+         margin-top: 20px
+         @include font (18,14)
+   &__text
+      color: #9b9999
+      text-align: center
+      padding: 30px 0 50px 0
+      @include font (16, 10)
+      @media screen and ( max-width: 768px )
+         padding: 20px 0
+   &__row
+      display: flex
+      justify-content: space-between
+      @media screen and ( max-width: 768px )
+         flex-wrap: wrap
+         justify-content: center
+   &__item
+      margin-bottom: -80px
+      &:nth-child(2)
+         margin-left: 10px
+         margin-right: 10px
+      @media screen and ( max-width: 768px )
+         margin: 20px 0 0
+   &__image
+      display: block
+      width: 100%
+      height: auto
+
+.purchase
+   padding: 130px 0 60px 0
+   text-align: center
+   font-family: "Roboto Condensed"
+   @media screen and ( max-width: 768px )
+      padding: 30px 0
+      hr
+         display: none
+   &__container
+      width: 60%
+      margin: 0 auto
+      overflow: hidden
+   &__title
+      font-weight: 700
+      color: #666262
+      padding-top: 50px
+      text-transform: uppercase
+      @include font (22,16)
+      @media screen and ( max-width: 768px )
+         padding: 0
+   &__text
+      color: #9b9999
+      line-height: 1.5
+      padding: 30px 0
+      @include font (16,10)
+      @media screen and ( max-width: 768px )
+         padding: 20px 0
+   &__link
+      display: inline-block
+      color: #fff
+      padding: 1em 2em
+      text-transform: uppercase
+      font-weight: 600
+      border-radius: 3px
+      background-color: #87b672
+      border: solid 2px #87b672
+      @include font (14,8)
+      &:hover
+         background-color: #fff
+         color: #87b672
+
+.footer
+   background-color: #333
+   padding: 60px 0 0 0
+   font-family: "Roboto Condensed"
+   @media screen and ( max-width: 768px )
+      padding: 30px 0 0
+   &__row
+      display: flex
+      padding-bottom: 40px
+      @media screen and ( max-width: 768px )
+         flex-wrap: wrap
+         justify-content: space-between
+         padding-bottom: 10px
+   &__column
+      width: 20%
+      @media screen and ( max-width: 768px )
+         width: 40%
+      @media screen and ( max-width: 515px )
+         justify-content: space-between  
+      &:first-child
+         width: 30%
+         @media screen and ( max-width: 768px )
+            width: 50%
+            margin-bottom: 20px
+         @media screen and ( max-width: 515px )
+            width: 100%
+      &:nth-child(2)
+         padding-left: 30px
+         @media screen and ( max-width: 768px )
+            padding: 0
+            margin-bottom: 20px
+      &:nth-child(3)
+         padding-left: 40px
+         @media screen and ( max-width: 768px )
+            padding: 0
+         @media screen and ( max-width: 515px )
+            width: 25%
+      &:nth-child(4)
+         @media screen and ( max-width: 515px )
+            width: 100%
+            margin-top: 20px    
+   &__logo
+      display: flex
+      align-items: center
+      justify-content: space-between
+   &__text
+      color: #9b9999
+      line-height: 1.5
+      @include font(14,8)
+      &_white
+         color: #cbcbcb
+         &:hover
+            text-decoration: underline
+   &__title
+      font-weight: 700
+      color: #fefefe
+      text-transform: uppercase
+      padding-bottom: 30px
+      @include font(18,12)
+      @media screen and ( max-width: 768px )
+         padding-bottom: 10px
+   &__mail
+      color: #9b9999
+      padding: 10px 0
+      @include  font (16,10)
+   &__number
+      font-weight: 700
+      color: #fefefe
+      @include font (16,10)
+   &__list
+      text-transform: uppercase
+   &__list_sm
+      text-transform: capitalize
+      @include font (14,10)
+   &__arrow
+      display: flex
+      align-items: center
+   &__icon
+      fill: #fff
+      width: 15px
+      height: 20px
+      padding-right: 5px
+      @media screen and ( max-width: 515px )
+         width: 10px
+         height: 15px
+   &__link
+      color: #9b9999
+      &:hover
+         text-decoration: underline
+   &__form
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      @media screen and ( max-width: 515px )
+         margin-top: 10px
+   &__input
+      padding: 10px 0 10px 15px
+      border: none
+      background-color: #828282
+      color: #fefefe
+      transition: all .3s linear
+      font-family: "Roboto Condensed"
+      width: 75%
+      @include font (14,8)
+      &:hover
+         background-color: #4e4c4c
+      &:focus
+         background-color: #4e4c4c
+      &::placeholder
+         color: #fefefe
+      @media screen and ( max-width: 515px )
+         width: 100%
+   &__button
+      border: none
+      text-transform: uppercase
+      color: #fefefe
+      background-color: #828282
+      transition: background-color .3s linear
+      font-family: "Roboto Condensed"
+      padding: 10px  20px
+      margin-left: 5px
+      @include font (14,8)
+      &:hover
+         background-color: #4e4c4c
+   &__base
+      display: flex
+      justify-content: space-between
+      padding: 20px 0
+      @media screen and ( max-width: 768px )
+         padding: 10px 0

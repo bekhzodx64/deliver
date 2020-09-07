@@ -1,0 +1,336 @@
+@import variable
+
+.container
+   max-width: 1240px
+   margin: 0 auto
+   padding: 0 30px
+
+.header
+   margin: 0 auto
+   background-color: #fefefe
+   &__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-top: 20px
+   &__logo
+      font-family: Pacifico
+      text-transform: capitalize
+      font-size: 40px
+      color: #666262
+      &:hover
+         cursor: pointer
+   &__logo_footer
+      color: #fbfbfb
+   &__icon
+      display: flex
+      align-items: center
+      &_item
+         width: 30px
+         height: 30px
+         margin-left: 8px
+         transition: transform .2s linear
+         &:hover
+            cursor: pointer
+            transform: translateY(-3px)
+   &__background
+      margin-top: 25px
+      background: url("../img/bg-img.jpg") bottom no-repeat fixed
+      background-size: cover
+      font-family: "Roboto Condensed"
+      &_title
+         color: #fefefe
+         font-size: 36px
+         text-transform: uppercase
+         padding: 60px 0
+   .navigation
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding-top: 10px
+      font-family: Oswald
+      &__link
+         margin-right: 40px
+         text-transform: uppercase
+         font-size: 18px
+         font-weight: 600
+         color: #666262
+         &:hover
+            color: #87b672
+      &__search
+         width: 25px
+         height: 25px
+         display: block
+         fill: #666262
+         transition: fill .3s linear
+         &:hover
+            cursor: pointer
+            fill: #87b672
+      &__active
+         color: #87b672
+   &__bottom
+      width: 60%
+      margin: 0 auto
+      text-align: center
+      padding: 60px 0
+      font-family: "Roboto Condensed"
+      &_title
+         margin: 0 0 30px
+         font-size: 22px
+         font-weight: 600
+         color: #5f5b5b
+      &_text
+         font-size: 16px
+         line-height: 24px
+         color: #8f8f8f
+
+.form
+   margin: 60px 0
+   font-family: "Roboto Condensed"
+   &__container
+      display: flex
+      justify-content: space-between
+   .left
+      width: 65%
+      &__title
+         font-size: 18px
+         font-weight: 600
+         color: #5f5b5b
+         margin-top: 15px
+         &_red
+            font-size: 14px
+            font-weight: 600
+            line-height: 22px
+            color: #e74c3c
+      &__text
+         font-size: 16px
+         color: #8f8f8f
+         margin: 0 0 15px
+      &__input 
+         background-color: #efefef
+         border: none
+         padding: 10px 10px 
+         width: 45%
+         font-family: "Roboto Condensed"
+         &:focus
+            outline: 1px solid #87b672
+         &_area
+            border: none
+            background-color: #efefef
+            width: 90%
+            height: 300px
+            resize: vertical
+            min-height: 300px
+            max-height: 500px
+            padding: 10px
+            font-family: "Roboto Condensed"
+            &:focus
+               outline: 1px solid #87b672
+      &__button
+         display: inline-block
+         padding: 1em 2em
+         background-color: #87b672
+         font-size: 14px
+         font-weight: 600
+         color: #ffffff
+         text-transform: uppercase
+         margin: 30px 0 0
+         border: 2px solid #87b672
+         border-radius: 3px
+         @include font (14,8)
+         &:hover
+            background-color: #fff
+            color: #87b672
+   .right
+      width: 30%
+      &__title
+         font-size: 18px
+         font-weight: 600
+         color: #5f5b5b
+         margin: 0 0 15px
+      &__text
+         font-size: 16px
+         color: #8f8f8f
+         margin: 0 0 10px
+      &__info
+         display: flex
+         justify-content: space-between
+         font-size: 16px
+         color: #8f8f8f
+         margin: 0 0 10px
+         &_bold
+            font-weight: bold
+      &__schedule
+         display: flex
+         justify-content: space-between
+         font-size: 16px
+         color: #8f8f8f
+         line-height: 18px  
+         margin: 0 0 10px       
+         &_item
+            margin: 5px 0
+
+.join
+   padding: 0 0 60px 0
+   text-align: center
+   font-family: "Roboto Condensed"
+   &__container
+      width: 60%
+      margin: 60px auto 0
+   &__title
+      font-size: 22px
+      font-weight: 600
+      color: #666262
+      text-transform: uppercase
+   &__text
+      font-size: 16px
+      color: #9b9999
+      line-height: 24px
+      padding: 30px 0
+   &__link
+      display: inline-block
+      color: #fff
+      padding: 1em 2em
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 600
+      border-radius: 3px
+      background-color: #87b672
+      border: solid 2px #87b672
+      @include font (14,8)
+      &:hover
+         background-color: #fff
+         color: #87b672
+
+.footer
+   background-color: #333
+   padding: 60px 0 0 0
+   font-family: "Roboto Condensed"
+   @media screen and ( max-width: 768px )
+      padding: 30px 0 0
+   &__row
+      display: flex
+      padding-bottom: 40px
+      @media screen and ( max-width: 768px )
+         flex-wrap: wrap
+         justify-content: space-between
+         padding-bottom: 10px
+   &__column
+      width: 20%
+      @media screen and ( max-width: 768px )
+         width: 40%
+      @media screen and ( max-width: 515px )
+         justify-content: space-between  
+      &:first-child
+         width: 30%
+         @media screen and ( max-width: 768px )
+            width: 50%
+            margin-bottom: 20px
+         @media screen and ( max-width: 515px )
+            width: 100%
+      &:nth-child(2)
+         padding-left: 30px
+         @media screen and ( max-width: 768px )
+            padding: 0
+            margin-bottom: 20px
+      &:nth-child(3)
+         padding-left: 40px
+         @media screen and ( max-width: 768px )
+            padding: 0
+         @media screen and ( max-width: 515px )
+            width: 25%
+      &:nth-child(4)
+         @media screen and ( max-width: 515px )
+            width: 100%
+            margin-top: 20px    
+   &__logo
+      display: flex
+      align-items: center
+      justify-content: space-between
+   &__text
+      color: #9b9999
+      line-height: 1.5
+      @include font(14,8)
+      &_white
+         color: #cbcbcb
+         &:hover
+            text-decoration: underline
+   &__title
+      font-weight: 700
+      color: #fefefe
+      text-transform: uppercase
+      padding-bottom: 30px
+      @include font(18,12)
+      @media screen and ( max-width: 768px )
+         padding-bottom: 10px
+   &__mail
+      color: #9b9999
+      padding: 10px 0
+      @include  font (16,10)
+   &__number
+      font-weight: 700
+      color: #fefefe
+      @include font (16,10)
+   &__list
+      text-transform: uppercase
+   &__list_sm
+      text-transform: capitalize
+      @include font (14,10)
+   &__arrow
+      display: flex
+      align-items: center
+   &__icon
+      fill: #fff
+      width: 15px
+      height: 20px
+      padding-right: 5px
+      @media screen and ( max-width: 515px )
+         width: 10px
+         height: 15px
+   &__link
+      color: #9b9999
+      &:hover
+         text-decoration: underline
+   &__form
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+      @media screen and ( max-width: 515px )
+         margin-top: 10px
+   &__input
+      padding: 10px 0 10px 15px
+      border: none
+      background-color: #828282
+      color: #fefefe
+      transition: all .3s linear
+      font-family: "Roboto Condensed"
+      width: 75%
+      @include font (14,8)
+      &:hover
+         background-color: #4e4c4c
+      &:focus
+         background-color: #4e4c4c
+      &::placeholder
+         color: #fefefe
+      @media screen and ( max-width: 515px )
+         width: 100%
+   &__button
+      border: none
+      text-transform: uppercase
+      color: #fefefe
+      background-color: #828282
+      transition: background-color .3s linear
+      font-family: "Roboto Condensed"
+      padding: 10px  20px
+      margin-left: 5px
+      @include font (14,8)
+      &:hover
+         background-color: #4e4c4c
+   &__base
+      display: flex
+      justify-content: space-between
+      padding: 20px 0
+      @media screen and ( max-width: 768px )
+         padding: 10px 0
+
+  
